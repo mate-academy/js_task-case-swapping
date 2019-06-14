@@ -15,6 +15,16 @@
  * @return {string}
  */
 function swapCase(phrase) {
+  let caseSwappedPhrase = '';
+  for (let i = 0; i < phrase.length; i++) {
+    const word = phrase[i];
+    if (word.toUpperCase() === word) {
+      caseSwappedPhrase += word.toLowerCase();
+    } else {
+      caseSwappedPhrase += word.toUpperCase();
+    }
+  }
+  return caseSwappedPhrase;
   // write code here
 }
 
