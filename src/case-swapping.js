@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Implement swapCase function:
  *
@@ -15,7 +14,17 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
-}
-
+  const letter = phrase;
+  let result = '';
+  for (let i = 0; i < phrase.length; i++) {
+    if (isFinite(letter) === true) {
+      return letter;
+    } else if (letter[i] === letter[i].toUpperCase()) {
+      result += letter.charAt(i).toLowerCase();
+    } else {
+      result += letter.charAt(i).toUpperCase();
+    }
+  }
+  return result;
+};
 module.exports = swapCase;
