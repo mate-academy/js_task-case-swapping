@@ -15,7 +15,6 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // eslint-disable-next-line no-unused-vars
   let newString = '';
   for (let i = 0; i < phrase.length; i++) {
     if (phrase[i] === phrase[i].toUpperCase()) {
