@@ -15,7 +15,16 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  // eslint-disable-next-line no-unused-vars
+  let newString = '';
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === phrase[i].toUpperCase()) {
+      newString += phrase[i].toLowerCase();
+    } else {
+      newString += phrase[i].toUpperCase();
+    }
+  }
+  return newString;
 }
 
 module.exports = swapCase;
