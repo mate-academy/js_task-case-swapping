@@ -16,7 +16,7 @@
  */
 function swapCase(phrase) {
   const resultPhrase = phrase.split('').map((char) => {
-    return (char === char.toUpperCase() && char !== char.toLowerCase())
+    return (char === char.toUpperCase())
       ? char.toLowerCase()
       : char.toUpperCase();
   });
