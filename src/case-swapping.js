@@ -20,9 +20,7 @@ function swapCase(phrase) {
     .map(elem =>
       elem === elem.toUpperCase()
         ? elem.toLowerCase()
-        : elem === elem.toLowerCase()
-          ? elem.toUpperCase()
-          : elem
+        : elem.toUpperCase()
     )
     .join('');
 }
