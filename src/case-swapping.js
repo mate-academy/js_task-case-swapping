@@ -16,6 +16,16 @@
  */
 function swapCase(phrase) {
   // write code here
+  const invertedCasePhrase = [];
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === phrase[i].toLowerCase()) {
+      invertedCasePhrase.push(phrase[i].toUpperCase());
+    } else {
+      invertedCasePhrase.push(phrase[i].toLowerCase());
+    }
+  }
+  return invertedCasePhrase.join('');
 }
 
 module.exports = swapCase;
