@@ -15,12 +15,12 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const letters = phrase.split('');
-  return letters.map(letter => {
-    return letter.toUpperCase() === letter
-      ? letter.toLowerCase()
-      : letter.toUpperCase();
-  }).join('');
+  return phrase.split('')
+    .map(letter => {
+      return letter.toUpperCase() === letter
+        ? letter.toLowerCase()
+        : letter.toUpperCase();
+    }).join('');
 }
 
 module.exports = swapCase;
