@@ -15,7 +15,21 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  const regLetter = new RegExp('[a-zA-Z]');
+  const regNumber = new RegExp('\\d');
+  let result = '';
+
+  Array.from(phrase).forEach(char => {
+    if (!regLetter.test(char) || regNumber.test(char)) {
+      result = result.concat(char);
+    } else if (char === char.toLowerCase()) {
+      result = result.concat(char.toUpperCase());
+    } else if (char === char.toUpperCase()) {
+      result = result.concat(char.toLowerCase());
+    }
+  });
+
+  return result;
 }
 
 module.exports = swapCase;
