@@ -17,19 +17,19 @@
 function swapCase(phrase) {
   const regLetter = new RegExp('[a-zA-Z]');
   const regNumber = new RegExp('\\d');
-  let result = '';
+  let swappedPhrase = '';
 
   Array.from(phrase).forEach(char => {
     if (!regLetter.test(char) || regNumber.test(char)) {
-      result = result.concat(char);
+      swappedPhrase = swappedPhrase.concat(char);
     } else if (char === char.toLowerCase()) {
-      result = result.concat(char.toUpperCase());
+      swappedPhrase = swappedPhrase.concat(char.toUpperCase());
     } else if (char === char.toUpperCase()) {
-      result = result.concat(char.toLowerCase());
+      swappedPhrase = swappedPhrase.concat(char.toLowerCase());
     }
   });
 
-  return result;
+  return swappedPhrase;
 }
 
 module.exports = swapCase;
