@@ -22,8 +22,11 @@ function swapCase(phrase) {
   }
 
   phraseArray.forEach(function(item, index, arr) {
-    isUpperCase(item) ? arr[index] = item.toLowerCase()
-      : arr[index] = item.toUpperCase();
+    if (isUpperCase(item)) {
+      arr[index] = item.toLowerCase();
+    } else {
+      arr[index] = item.toUpperCase();
+    }
   });
 
   return phraseArray.join('');
