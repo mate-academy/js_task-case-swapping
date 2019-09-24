@@ -15,7 +15,12 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  return phrase.split('')
+    .map((e) => {
+      return e.toUpperCase()
+        .localeCompare(e) ? e.toUpperCase() : e.toLowerCase();
+    })
+    .join('');
 }
 
 module.exports = swapCase;
