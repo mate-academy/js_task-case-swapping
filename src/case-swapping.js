@@ -16,7 +16,8 @@
  */
 function swapCase(phrase) {
   return phrase.split('')
-    .map(item => item === item.toLowerCase() ? item.toUpperCase()
+    .map(item => item === item.toLowerCase()
+      ? item.toUpperCase()
       : item.toLowerCase()).join('');
 }
 
