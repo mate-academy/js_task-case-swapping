@@ -26,6 +26,7 @@ function swapCase(phrase) {
   }
 
   splitPhrase = splitPhrase.join('');
+
   return splitPhrase;
 }
 
