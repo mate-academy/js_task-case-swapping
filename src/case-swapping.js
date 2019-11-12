@@ -5,7 +5,7 @@
  *
  * Given a string, swap the case for each of the letters.
  *
- * Examples:
+ * Eletteramples:
  * swapCase "aBc"      should return "AbC"
  * swapCase "ABC"      should return "abc"
  * swapCase "123235"   should return "123235"
@@ -15,7 +15,10 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  return phrase
+    .split('')
+    .map(x => x === x.toLowerCase() ? x.toUpperCase() : x.toLowerCase())
+    .join('');
 }
 
 module.exports = swapCase;
