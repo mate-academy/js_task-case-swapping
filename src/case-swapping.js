@@ -17,14 +17,10 @@
 function swapCase(phrase) {
   let swaped = '';
 
-  for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i] === phrase[i].toLowerCase()) {
-      swaped += phrase[i].toUpperCase();
-    } else if (phrase[i] === phrase[i].toUpperCase()) {
-      swaped += phrase[i].toLowerCase();
-    } else {
-      swaped += phrase[i];
-    }
+  for (const char of phrase) {
+    swaped += (char === char.toLowerCase())
+      ? char.toUpperCase()
+      : char.toLowerCase();
   }
 
   return swaped;
