@@ -20,9 +20,9 @@ function swapCase(phrase) {
   for (let i = 0; i < phrase.length; i++) {
     if (phrase[i] === phrase[i].toLowerCase()) {
       phraseArray[i] = phrase[i].toUpperCase();
-    } else {
-      phraseArray[i] = phrase[i].toLowerCase();
+      continue;
     }
+    phraseArray[i] = phrase[i].toLowerCase();
   }
 
   return phraseArray.join('');
