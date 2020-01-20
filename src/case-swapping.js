@@ -15,7 +15,7 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const phraseToUpperCase = phrase.toLocaleUpperCase().split('');
+  const phraseToUpperCase = phrase.toLocaleUpperCase();
   const swapedCase = [];
 
   for (let i = 0; i < phrase.length; i++) {
