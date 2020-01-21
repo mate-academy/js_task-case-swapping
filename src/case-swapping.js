@@ -16,15 +16,17 @@
  */
 function swapCase(phrase) {
   // write code here
-  let newPhrase = '';
+  let swappedPhrase = '';
 
   for (const letter of phrase) {
-    (letter === letter.toLowerCase())
-      ? newPhrase = newPhrase + letter.toUpperCase()
-      : newPhrase = newPhrase + letter.toLowerCase();
+    if (letter === letter.toLowerCase()) {
+      swappedPhrase += letter.toUpperCase();
+    } else {
+      swappedPhrase += letter.toLowerCase();
+    }
   }
 
-  return newPhrase;
+  return swappedPhrase;
 }
 
 module.exports = swapCase;
