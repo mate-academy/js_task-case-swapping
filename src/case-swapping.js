@@ -16,10 +16,12 @@
  */
 function swapCase(phrase) {
   const letter = phrase.split('');
-  const string = letter.map(x => (x.toLowerCase() === x) ? x
-    .toUpperCase() : x.toLowerCase());
 
-  return string.join('');
+  return letter.map(x =>
+    x.toLowerCase() === x
+      ? x.toUpperCase()
+      : x.toLowerCase()
+  ).join('');
 }
 
 module.exports = swapCase;
