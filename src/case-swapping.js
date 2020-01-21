@@ -15,14 +15,14 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const phraseToUpperCase = phrase.toLocaleUpperCase();
+  const phraseUpperCase = phrase.toLocaleUpperCase();
   const swapedCase = [];
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phraseToUpperCase[i] === phrase[i]) {
-      swapedCase.push(phraseToUpperCase[i].toLowerCase());
+    if (phraseUpperCase[i] === phrase[i]) {
+      swapedCase.push(phraseUpperCase[i].toLowerCase());
     } else {
-      swapedCase.push(phraseToUpperCase[i].toUpperCase());
+      swapedCase.push(phraseUpperCase[i].toUpperCase());
     }
   }
 
