@@ -16,10 +16,10 @@
  */
 function swapCase(phrase) {
   const arr = phrase.split('').map(elem => {
-    if (elem === elem.toLocaleLowerCase()) {
+    if (elem === elem.toLowerCase()) {
       return elem.toUpperCase();
     } else {
-      return elem.toLocaleLowerCase();
+      return elem.toLowerCase();
     }
   });
 
