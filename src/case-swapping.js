@@ -15,14 +15,13 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const phraseArray = phrase.split('');
   let tempArray = '';
 
-  for (let i = 0; i < phraseArray.length; i++) {
-    if (phraseArray[i] === phraseArray[i].toUpperCase()) {
-      tempArray += phraseArray[i].toLowerCase();
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === phrase[i].toUpperCase()) {
+      tempArray += phrase[i].toLowerCase();
     } else {
-      tempArray += phraseArray[i].toUpperCase();
+      tempArray += phrase[i].toUpperCase();
     }
   }
 
