@@ -15,7 +15,21 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  let swapPhrase = '';
+
+  for (const symbol of phrase) {
+    const symbolCode = symbol.charCodeAt(0);
+
+    if (symbolCode >= 97 && symbolCode <= 122) {
+      swapPhrase = swapPhrase + String.fromCharCode(symbolCode - 32);
+    } else if (symbolCode >= 65 && symbolCode <= 90) {
+      swapPhrase = swapPhrase + String.fromCharCode(symbolCode + 32);
+    } else {
+      swapPhrase = swapPhrase + symbol;
+    }
+  }
+
+  return swapPhrase;
 }
 
 module.exports = swapCase;
