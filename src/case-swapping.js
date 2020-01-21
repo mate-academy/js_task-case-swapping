@@ -15,15 +15,19 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const cases = phrase.split('');
+  let swapped = '';
 
-  return cases.map(function(item) {
-    if (item === item.toUpperCase()) {
-      return item.toLowerCase();
+  for (let i = 0; i < phrase.length; i++) {
+    const items = phrase[i];
+
+    if (items === items.toUpperCase()) {
+      swapped += items.toLowerCase();
     } else {
-      return item.toUpperCase();
+      swapped += items.toUpperCase();
     }
-  }).join('');
+  }
+
+  return swapped;
 }
 
 module.exports = swapCase;
