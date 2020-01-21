@@ -18,12 +18,12 @@ function swapCase(phrase) {
   let swapped = '';
 
   for (let i = 0; i < phrase.length; i++) {
-    const items = phrase[i];
+    const letter = phrase[i];
 
-    if (items === items.toUpperCase()) {
-      swapped += items.toLowerCase();
+    if (letter === letter.toUpperCase()) {
+      swapped += letter.toLowerCase();
     } else {
-      swapped += items.toUpperCase();
+      swapped += letter.toUpperCase();
     }
   }
 
