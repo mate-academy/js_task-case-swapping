@@ -22,8 +22,6 @@ function swapCase(phrase) {
       str += phrase[i].toUpperCase();
     } else if (phrase[i] === phrase[i].toUpperCase()) {
       str += phrase[i].toLowerCase();
-    } else {
-      str += phrase[i];
     }
   }
 
