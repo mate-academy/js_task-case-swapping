@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * fs_on_dec19_salogubova
  * Implement swapCase function:
  *
  * Given a string, swap the case for each of the letters.
@@ -15,7 +16,17 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  let resultPhrase = '';
+
+  for (const symbol of phrase) {
+    if (symbol === symbol.toLowerCase()) {
+      resultPhrase = resultPhrase + symbol.toUpperCase();
+    } else {
+      resultPhrase = resultPhrase + symbol.toLowerCase();
+    }
+  }
+
+  return resultPhrase;
 }
 
 module.exports = swapCase;
