@@ -17,17 +17,17 @@
 
 // New solution:
 function swapCase(phrase) {
-  let res = '';
+  let swappedPhrase = '';
 
   for (const item of phrase) {
     if (item === item.toUpperCase()) {
-      res += item.toLowerCase();
+      swappedPhrase += item.toLowerCase();
     } else {
-      res += item.toUpperCase();
+      swappedPhrase += item.toUpperCase();
     }
   }
 
-  return res;
+  return swappedPhrase;
 }
 
 // // Old solution:
