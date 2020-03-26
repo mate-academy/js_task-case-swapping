@@ -14,8 +14,7 @@
  *
  * @return {string}
  */
-function swapCase(phrase) {
-  // write code here
-}
+const swapCase = phrase => phrase.split('').map(letter => (/[a-z]/g)
+  .test(letter) ? letter.toUpperCase() : letter.toLowerCase()).join('');
 
 module.exports = swapCase;
