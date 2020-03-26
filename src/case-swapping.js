@@ -22,9 +22,11 @@ function swapCase(phrase) {
   let swappedPhrase = '';
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase.charCodeAt(i) > 64 && phrase.charCodeAt(i) < 91) {
+    const charCode = phrase.charCodeAt(i);
+
+    if (charCode > 64 && charCode < 91) {
       swappedPhrase += phrase[i].toLowerCase();
-    } else if (phrase.charCodeAt(i) > 96 && phrase.charCodeAt(i) < 123) {
+    } else if (charCode > 96 && charCode < 123) {
       swappedPhrase += phrase[i].toUpperCase();
     } else {
       swappedPhrase += phrase[i];
