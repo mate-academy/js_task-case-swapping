@@ -15,7 +15,9 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  return phrase.replace(/\S/g, c => {
+    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+  });
 }
 
 module.exports = swapCase;
