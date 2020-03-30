@@ -23,11 +23,11 @@ function swapCase(phrase) {
     smallLetter = phrase[i].toLowerCase();
     bigLetter = phrase[i].toUpperCase();
 
-    phrase[i] === bigLetter
-      ? newStr += smallLetter
-      : phrase[i] === smallLetter
-        ? newStr += bigLetter
-        : newStr += phrase[i];
+    if (phrase[i] === bigLetter) {
+      newStr += smallLetter;
+      continue;
+    }
+    newStr += bigLetter;
   }
 
   return newStr;
