@@ -14,9 +14,12 @@
  *
  * @return {string}
  */
+
 function swapCase(phrase) {
-  return phrase.replace(/\S/g, c => {
-    return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+  return phrase.replace(/\S/g, symbol => {
+    return symbol === symbol.toUpperCase()
+      ? symbol.toLowerCase()
+      : symbol.toUpperCase();
   });
 }
 
