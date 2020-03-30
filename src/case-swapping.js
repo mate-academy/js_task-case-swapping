@@ -16,15 +16,18 @@
  */
 function swapCase(phrase) {
   let newStr = '';
+  let smallLetter = '';
+  let bigLetter = '';
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i] === phrase[i].toUpperCase()) {
-      newStr += phrase[i].toLowerCase();
-    } else if (phrase[i] === phrase[i].toLowerCase()) {
-      newStr += phrase[i].toUpperCase();
-    } else {
-      newStr += phrase[i];
-    }
+    smallLetter = phrase[i].toLowerCase();
+    bigLetter = phrase[i].toUpperCase();
+
+    phrase[i] === bigLetter
+      ? newStr += smallLetter
+      : phrase[i] === smallLetter
+        ? newStr += bigLetter
+        : newStr += phrase[i];
   }
 
   return newStr;
