@@ -18,7 +18,7 @@ function swapCase(phrase) {
   let result = '';
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase.codePointAt(i) >= 65 && phrase.codePointAt(i) <= 90) {
+    if (phrase[i].toUpperCase() === phrase[i]) {
       result += phrase[i].toLowerCase();
     } else {
       result += phrase[i].toUpperCase();
@@ -27,5 +27,7 @@ function swapCase(phrase) {
 
   return result;
 }
+
+// (phrase.codePointAt(i) >= 65 && phrase.codePointAt(i) <= 90)
 
 module.exports = swapCase;
