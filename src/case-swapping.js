@@ -15,18 +15,18 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const arr = phrase.split('');
-  const swapArr = [];
+  const array = phrase.split('');
+  const swapArray = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i].toUpperCase()) {
-      swapArr.push(arr[i].toLowerCase());
-    } else if (arr[i] === arr[i].toLowerCase()) {
-      swapArr.push(arr[i].toUpperCase());
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === array[i].toUpperCase()) {
+      swapArray.push(array[i].toLowerCase());
+    } else if (array[i] === array[i].toLowerCase()) {
+      swapArray.push(array[i].toUpperCase());
     }
   }
 
-  return swapArr.join('');
+  return swapArray.join('');
 }
 
 module.exports = swapCase;
