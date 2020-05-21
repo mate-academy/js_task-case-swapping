@@ -15,15 +15,15 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const arr = [];
+  let str = '';
   const toggle = char => char === char.toUpperCase()
     ? char.toLowerCase() : char.toUpperCase();
 
-  for (const char of phrase.split('')) {
-    arr.push(toggle(char));
+  for (const char of phrase) {
+    str += toggle(char);
   }
 
-  return arr.join('');
+  return str;
 }
 
 module.exports = swapCase;
