@@ -16,10 +16,10 @@
  */
 function swapCase(phrase) {
   let newPhrase = '';
-  const upperLetters = /[A-Z]/g;
+  const regExp = /[A-Z]/g;
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i].match(upperLetters)) {
+    if (phrase[i].match(regExp)) {
       newPhrase += phrase[i].toLowerCase();
     } else {
       newPhrase += phrase[i].toUpperCase();
