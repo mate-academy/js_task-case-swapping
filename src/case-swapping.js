@@ -18,10 +18,10 @@ function swapCase(phrase) {
   let result = '';
 
   for (let i = 0; i < phrase.length; i++) {
-    if (phrase.charAt(i) === phrase.charAt(i).toUpperCase()) {
-      result += phrase.charAt(i).toLowerCase();
+    if (phrase[i] === phrase[i].toUpperCase()) {
+      result += phrase[i].toLowerCase();
     } else {
-      result += phrase.charAt(i).toUpperCase();
+      result += phrase[i].toUpperCase();
     }
   }
 
