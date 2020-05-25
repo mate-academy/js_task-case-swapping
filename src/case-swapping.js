@@ -19,9 +19,9 @@ function swapCase(phrase) {
 
   for (let i = 0; i < phrase.length; i++) {
     if (phrase[i] === phrase[i].toUpperCase()) {
-      swapPhrase = swapPhrase + phrase[i].toLowerCase();
+      swapPhrase += phrase[i].toLowerCase();
     } else {
-      swapPhrase = swapPhrase + phrase[i].toUpperCase();
+      swapPhrase += phrase[i].toUpperCase();
     }
   }
 
