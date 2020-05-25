@@ -18,9 +18,11 @@ function swapCase(phrase) {
   const phraseArr = [];
 
   for (let i = 0; i < phrase.length; i++) {
-    phrase[i] === phrase[i].toUpperCase()
-      ? phraseArr.push(phrase[i].toLowerCase())
-      : phraseArr.push(phrase[i].toUpperCase());
+    if (phrase[i] === phrase[i].toUpperCase()) {
+      phraseArr.push(phrase[i].toLowerCase());
+    } else {
+      phraseArr.push(phrase[i].toUpperCase());
+    }
   }
 
   return phraseArr.join('');
