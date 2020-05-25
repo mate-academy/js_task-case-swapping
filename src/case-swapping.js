@@ -21,11 +21,11 @@ function swapCase(phrase) {
     return phrase;
   }
 
-  for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i] === phrase[i].toLowerCase()) {
-      newPhrase += phrase[i].toUpperCase();
+  for (const character of phrase) {
+    if (character === character.toLowerCase()) {
+      newPhrase += character.toUpperCase();
     } else {
-      newPhrase += phrase[i].toLowerCase();
+      newPhrase += character.toLowerCase();
     }
   }
 
