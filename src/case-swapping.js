@@ -15,18 +15,18 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const swapPhrase = phrase.toLowerCase();
-  let resultPhrase = '';
+  const lowerPhrase = phrase.toLowerCase();
+  let swappedPhrase = '';
 
-  for (let i = 0; i < swapPhrase.length; i++) {
-    if (swapPhrase[i] === phrase[i]) {
-      resultPhrase += swapPhrase[i].toUpperCase();
+  for (let i = 0; i < lowerPhrase.length; i++) {
+    if (lowerPhrase[i] === phrase[i]) {
+      swappedPhrase += lowerPhrase[i].toUpperCase();
     } else {
-      resultPhrase += phrase[i].toLowerCase();
+      swappedPhrase += phrase[i].toLowerCase();
     }
   }
 
-  return resultPhrase;
+  return swappedPhrase;
 }
 
 module.exports = swapCase;
