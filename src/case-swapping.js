@@ -15,17 +15,17 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  const phraseArr = [];
+  let resultNew = '';
 
   for (let i = 0; i < phrase.length; i++) {
     if (phrase[i] === phrase[i].toUpperCase()) {
-      phraseArr.push(phrase[i].toLowerCase());
+      resultNew += phrase[i].toLowerCase();
     } else {
-      phraseArr.push(phrase[i].toUpperCase());
+      resultNew += phrase[i].toUpperCase();
     }
   }
 
-  return phraseArr.join('');
+  return resultNew;
 }
 
 module.exports = swapCase;
