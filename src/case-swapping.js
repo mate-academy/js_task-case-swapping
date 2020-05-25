@@ -23,10 +23,8 @@ function swapCase(phrase) {
 
     if (letter === letterTemp.toUpperCase()) {
       swapLetter = letter.toLowerCase();
-    } else if (letter === letterTemp.toLowerCase()) {
-      swapLetter = letter.toUpperCase();
     } else {
-      swapLetter = letter;
+      swapLetter = letter.toUpperCase();
     }
 
     return swapLetter;
