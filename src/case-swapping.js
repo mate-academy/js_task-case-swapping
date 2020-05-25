@@ -15,21 +15,17 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  let newPhrase = '';
-
-  if (!isNaN(phrase)) {
-    return phrase;
-  }
+  let swappedPhrase = '';
 
   for (const character of phrase) {
     if (character === character.toLowerCase()) {
-      newPhrase += character.toUpperCase();
+      swappedPhrase += character.toUpperCase();
     } else {
-      newPhrase += character.toLowerCase();
+      swappedPhrase += character.toLowerCase();
     }
   }
 
-  return newPhrase;
+  return swappedPhrase;
 }
 
 module.exports = swapCase;
