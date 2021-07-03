@@ -15,7 +15,17 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  let phraseArray = '';
+
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === phrase[i].toLowerCase()) {
+      phraseArray += phrase[i].toUpperCase();
+      continue;
+    }
+    phraseArray += phrase[i].toLowerCase();
+  }
+
+  return phraseArray;
 }
 
 module.exports = swapCase;
