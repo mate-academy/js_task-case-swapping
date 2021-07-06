@@ -15,7 +15,14 @@
  * @return {string}
  */
 function swapCase(phrase) {
-  // write code here
+  const arr = phrase
+    .split('')
+    .map(char => {
+      if (char === char.toLowerCase()) {
+        return char.toUpperCase();
+      } return char.toLowerCase();
+    });
+  return arr.join('');
 }
 
 module.exports = swapCase;
