@@ -14,8 +14,33 @@
  *
  * @return {string}
  */
+
+// New solution:
 function swapCase(phrase) {
-  // write code here
+  let swappedPhrase = '';
+
+  for (const item of phrase) {
+    if (item === item.toUpperCase()) {
+      swappedPhrase += item.toLowerCase();
+    } else {
+      swappedPhrase += item.toUpperCase();
+    }
+  }
+
+  return swappedPhrase;
 }
+
+// // Old solution:
+// function swapCase(phrase) {
+//   return phrase.split('')
+//     .map(function(item) {
+//       if (item === item.toLowerCase()) {
+//         return item.toUpperCase();
+//       } else if (item === item.toUpperCase()) {
+//         return item.toLowerCase();
+//       }
+//     })
+//     .join('');
+// }
 
 module.exports = swapCase;
