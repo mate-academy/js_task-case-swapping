@@ -16,6 +16,23 @@
  */
 function swapCase(phrase) {
   // write code here
+  if (!isNaN(phrase)) {
+    return phrase;
+  } else {
+    const arrowPhrase = phrase.split('');
+    let resultPhrase = '';
+
+    for (let i = 0; i < arrowPhrase.length; i++) {
+      if (arrowPhrase[i] === arrowPhrase[i].toUpperCase()) {
+        (arrowPhrase[i] = arrowPhrase[i].toLowerCase());
+      } else if (arrowPhrase[i] === arrowPhrase[i].toLowerCase()) {
+        (arrowPhrase[i] = arrowPhrase[i].toUpperCase());
+      }
+    }
+
+    resultPhrase = arrowPhrase.join('');
+    return resultPhrase;
+  }
 }
 
 module.exports = swapCase;
