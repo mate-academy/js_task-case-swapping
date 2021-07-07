@@ -16,6 +16,19 @@
  */
 function swapCase(phrase) {
   // write code here
+  const phraseArr = phrase.split('');
+  const regUp = /[A-Z]/g;
+  const regLow = /[a-z]/g;
+
+  for (let i = 0; i < phraseArr.length; i++) {
+    if (phraseArr[i].match(regUp)) {
+      phraseArr[i] = phraseArr[i].toLowerCase();
+    } else if (phraseArr[i].match(regLow)) {
+      phraseArr[i] = phraseArr[i].toUpperCase();
+    }
+  }
+
+  return phraseArr.join('');
 }
 
 module.exports = swapCase;
